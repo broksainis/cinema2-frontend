@@ -5,7 +5,7 @@ import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import { experimentalStyled as styled } from '@mui/material/styles';
 import Paper from '@mui/material/Paper';
-const BACKEND = process.env.BACKEND || '0.0.0.0';
+const BACKEND = 'movies2-gateway';
 const port = process.env.PORT || 8080;
 
 const Item = styled(Paper)(({ theme }) => ({
