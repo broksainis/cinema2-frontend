@@ -19,7 +19,7 @@ function Movie() {
     useEffect(() => {
         const fetchMovieData = async () => {
             try {
-                const moviesList = await axios.get(`http://${BACKEND}:${port}`);
+                const moviesList = await axios.get(`https://${BACKEND}:${port}`);
                 const movieData = moviesList.data.find(movie => {
                     return movie.ID === param;
                 })

@@ -21,7 +21,7 @@ function Movies() {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const { data: response } = await axios.get(`http://${BACKEND}:${port}`);
+                const { data: response } = await axios.get(`https://${BACKEND}:${port}`);
                 setData(response);
             } catch (error) {
                 console.error(error.message);
