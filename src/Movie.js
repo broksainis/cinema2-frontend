@@ -17,7 +17,7 @@ function Movie() {
     useEffect(() => {
         const fetchMovieData = async () => {
             try {
-                const moviesList = await axios.get('https://cinema2-gateway.herokuapp.com');
+                const moviesList = await axios.get('https://cinema2-gateway-broksainis-dev.apps.sandbox.x8i5.p1.openshiftapps.com');
                 const movieData = moviesList.data.find(movie => {
                     return movie.ID === param;
                 })

@@ -19,7 +19,7 @@ function Movies() {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const { data: response } = await axios.get('https://cinema2-gateway.herokuapp.com');
+                const { data: response } = await axios.get('https://cinema2-gateway-broksainis-dev.apps.sandbox.x8i5.p1.openshiftapps.com');
                 setData(response);
             } catch (error) {
                 console.error(error.message);
