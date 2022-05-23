@@ -9,8 +9,6 @@ import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import { useParams } from "react-router-dom";
 import { format } from 'date-fns'
-const BACKEND = process.env.BACKEND || '0.0.0.0';
-const port = process.env.PORT || 8080;
 
 function Movie() {
     const param = parseInt(useParams().ID);
@@ -19,7 +17,7 @@ function Movie() {
     useEffect(() => {
         const fetchMovieData = async () => {
             try {
-                const moviesList = await axios.get(`https://${BACKEND}:${port}`);
+                const moviesList = await axios.get(`https://cinema2-gateway-broksainis-dev.apps.sandbox.x8i5.p1.openshiftapps.com`);
                 const movieData = moviesList.data.find(movie => {
                     return movie.ID === param;
                 })
